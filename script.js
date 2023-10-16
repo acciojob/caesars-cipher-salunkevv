@@ -38,7 +38,7 @@ function rot13(encodedStr) {
 	let ans ="";
 	for(let i=0; i<encodedStr.length ;i++)
 		{
-			if(lookup[encodedStr[i]]!= "undefined")
+			if(lookup[encodedStr[i]])
 			{
 			ans = ans+lookup[encodedStr[i]];
 			}
