@@ -38,7 +38,14 @@ function rot13(encodedStr) {
 	let ans ="";
 	for(let i=0; i<encodedStr.length ;i++)
 		{
+			if(lookup[encodedStr[i]]!= "undefined")
+			{
 			ans = ans+lookup[encodedStr[i]];
+			}
+			else
+			{
+				ans = ans + encodedStr[i];
+			}
 		}
 
   return ans; //return decodedArr
@@ -49,4 +56,4 @@ function rot13(encodedStr) {
 // console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
-//window.rot13 = rot13;
+window.rot13 = rot13;
